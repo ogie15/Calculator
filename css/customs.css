@@ -1,0 +1,29 @@
+.james{
+	color: #cc0000;
+	height: 140px; 
+	width: 100%; 
+	font-weight: bold; 
+	font-size: 38px; 
+	font-family:lucida console; 
+	border-bottom-style: solid; 
+	border-bottom-color: #cc0000; 
+	padding-top: 35px;
+	
+}
+
+.james:hover{
+	color: #3f6c45; 
+	text-decoration: none;
+}
+
+.james2{
+	display: block;
+  	padding: 0.5rem 1rem;
+	color: #e4ea8c;
+}
+
+.james2:hover{
+	color: #3f6c45;
+	padding: 20px; 
+	text-decoration: none;
+}

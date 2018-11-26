@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      calculator
+    </title>
+      <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+      <link rel="stylesheet" type="text/css" href="css/custom.css">
+    
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+     
+      <link rel="stylesheet" type="text/css" href="css/all.css">
+
+      <link rel="stylesheet" type="text/css" href="css/solid.css">
+
+      <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+      <script type="text/javascript" src="js/calculator.js"></script>
+
+  </head>
+  <body>
+  <!-- full cal start -->
+      <div align="center" class="container-fluid" style="border-radius:5px;box-shadow: 0px 5px 3px #800020;border-style: solid; border-color:#0a111b ; background-image: url(img/m1.jpg);">
+        <!-- blue row -->
+        <div class="row">
+          <div class="col-xs-12 scrn" align="center" style="color: white; padding: 20px; font-family: Calibri Light; background-color:#0a111b; opacity: 0.95">
+          <!-- nav bar side -->
+            <div class="row" align="center" style="margin-top:5px; color:#bab190;">
+                <div class="col-xs-1" align="right" style="padding-top: 2px">
+                  <i class=" fas fa-calculator" style="font-size: 45px;"></i>
+                </div>
+                <div class="col-xs-10" style="padding-top:2px; font-size: 40px; margin-left:20px;" align="left" >
+                  Calculator<span  style="font-family: Calibri Light"></span>
+                  <i id="time" class="fas fa-smile" style="font-size: 40px;"></i>
+            
+                </div>
+
+            </div>
+            <!-- nav bar -->
+
+            <!-- accumulator -->
+              <div class="row" align="right" style=" margin-top:3px; padding-left: 50px; background-color:white; border-color: none; border-top-right-radius: 10px; border-top-left-radius:10px">
+                 <span id="top_disp" style="color: #800020; font-weight: bold; font-size: 20px; text-align: right; padding:6px; padding-right: 15px;"></span>
+              </div>
+            <!-- accumulator end -->
+
+             <!-- full answer start -->
+              <div align="right" class="row" style="padding-left: 30px; font-weight: bold; font-size: 60px; padding-bottom: 5px; background-color:white; border-bottom-right-radius:10px; border-bottom-left-radius: 10px;">
+                <span id="disp" style="text-align: right; padding-right: 15px; color:#800020;">0</span>
+              </div>
+            <!-- full answer end -->
+
+            <!-- the square part -->
+            <div class="row" align="center" style="height:50px; margin-top: 45px; font-size: 20px;">
+
+                <div onclick="square_root()" style="padding-top: 10px" class="col-xs-3" align="center"><a href="javascript:void(0)" class="grey_btn" style="padding-left:18px; padding-right:16px;"><i class="fas fa-square-root-alt" style="font-size: 14px"></i></a></div> 
+
+                <div onclick="square()" style="padding-top: 10px" class="col-xs-3" align="center"><a href="javascript:void(0)" class="grey_btn" style="padding-left:19px; padding-right:17px;"><i class="fas fa-superscript" style="font-size: 14px"></i></a></div>            
+        
+                <div onclick="inv_num()" style="padding-top: 10px" class="col-xs-3" align="center"><a href="javascript:void(0)" class="grey_btn" style="padding-left:14px; padding-right:12px;">1/x</a></div>  
+
+                <div onclick="multiply('/')" style="padding-top: 10px" class="col-xs-3" align="center"><a href="javascript:void(0)" class=" grey_btn"><i class="fas fa-divide" style="font-size: 14px"></i></a></div>
+             
+            </div>
+            <!-- the square part end -->
+
+            <!-- 1st level start -->
+            <div class="row" align="center" style="font-size: 20px; height:50px; margin-top: 8px;">
+
+                 <div onclick="ce()" style="padding-top: 10px;" class="col-xs-3" align="center"><a href="javascript:void(0)" class="grey_btn" style="padding-left:15px; padding-right:15px;">CE</a></div>
+
+                 <div onclick="c()" style="padding-top: 10px" class="col-xs-3" align="center"><a href="javascript:void(0)" class=" grey_btn" style="padding-left:19px; padding-right:20px;"> C</a></div>
+
+                 <div onclick="back_space()" style="padding-top: 10px" class="col-xs-3" align="center"><a href="javascript:void(0)" class="grey_btn"style="padding-left:15px; padding-right:15px;"><i class="glyphicon glyphicon-chevron-left"></i></a></div>
+
+                 <div style="padding-top: 10px" class="col-xs-3" align="center"><a onclick="multiply('*')" href="javascript:void(0)" class=" grey_btn" style="padding-left:22.5px; padding-right:20px"> <i class="fas fa-times" style="font-size: 14px"></i></a></div>
+
+            </div>
+            <!-- 1st level end -->
+
+            <!-- 2nd level start -->
+            <div class="row" align="center" style="font-size: 20px; height:50px; margin-top: 8px;">
+            
+                <div style="padding-top: 10px" class="col-xs-3" align="center"><a onclick="num(7)" href="javascript:void(0)" class=" hb"> 7</a></div>
+            
+                <div style="padding-top: 10px" class="col-xs-3" align="center"><a onclick="num(8)" href="javascript:void(0)" class=" hb"> 8</a></div>
+            
+                <div style="padding-top: 10px" class="col-xs-3" align="center"><a onclick="num(9)" href="javascript:void(0)" class=" hb"> 9</a></div>
+            
+                 <div style="padding-top: 10px" class="col-xs-3" align="center"><a onclick="multiply('-')" href="javascript:void(0)" class=" grey_btn"> <i class=" fas fa-minus" style="font-size: 14px"></i></a></div>
+                
+            </div>
+            <!-- 2nd level end -->
+
+            <!-- 3rd level start -->
+            <div class="row" align="center" style="font-size: 20px; height:50px; margin-top: 8px;">
+
+                  <div style="padding-top: 10px" class="col-xs-3" align="center"><a onclick="num(4)" href="javascript:void(0)" class=" hb"> 4</a></div>
+
+                  <div style="padding-top: 10px" class="col-xs-3" align="center"><a onclick="num(5)" href="javascript:void(0)" class=" hb"> 5</a></div>
+                  
+                  <div style="padding-top: 10px" class="col-xs-3" align="center"><a onclick="num(6)" href="javascript:void(0)" class=" hb"> 6</a></div>
+                  
+                 <div style="padding-top: 10px" class="col-xs-3" align="center"><a onclick="multiply('+')" href="javascript:void(0)" class=" grey_btn"> <i class=" fas fa-plus" style="font-size: 14px"></i></a></div>
+                
+            </div>
+            <!-- 3rd level end -->
+
+            <!-- 4th level start -->
+            <div class="row" align="center" style="font-size: 20px;  height:50px; margin-top: 8px;">
+
+                  <div style="padding-top: 10px" class="col-xs-3" align="center"><a onclick="num(3)" href="javascript:void(0)" class=" hb"> 3</a></div>
+                  
+                  <div style="padding-top: 10px" class="col-xs-3" align="center"><a onclick="num(2)" href="javascript:void(0)" class=" hb"> 2</a></div>
+                  
+                  <div style="padding-top: 10px" class="col-xs-3" align="center"><a onclick="num(1)" href="javascript:void(0)" class=" hb"> 1</a></div>
+                  
+                  <div style="padding-top: 10px" class="col-xs-3" align="center"><a onclick="multiply('+-')" href="javascript:void(0)" class=" grey_btn" align="center" style="padding-left:20px; padding-right:20px;"><span>_</span></a></div>
+            </div>
+            <!-- 4th level end -->
+
+            <!-- 5th level start -->
+            <div class="row" align="center" style="font-size: 20px; height:50px; margin-top: 8px;">
+                  
+                  <div style="padding-top: 10px" class="col-xs-3" align="center"><a onclick="num(0)" href="javascript:void(0)" class=" hb"> 0</a></div>
+                  
+                  <div style="padding-top: 10px" class="col-xs-3" align="center"><a onclick="num('.')" href="javascript:void(0)" class=" hb" style="padding-left: 23px; padding-right: 23px ;"><i class="fas fa-circle" style="font-size: 5px"></i></a></div>
+
+                  <div style="padding-top: 10px; " class="col-xs-6" align="center"><a onclick="calc()" href="javascript:void(0)" class=" grey_btn grey_btn2" style="margin-top:50px;"> <i class=" fas fa-equals" style="font-size: 14px"></i></a></div>
+
+            </div> 
+            <!-- 5th level end -->
+          <div>
+        </div>
+        <!-- blue row end -->
+      </div>
+      <!-- full cal end -->
+
+
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.slim.min.js"></script>
+    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js.map"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/calculator.js"></script>
+    <!-- <script type="text/javascript" src="http://localhost/eni/assets/js/eni.js"></script> -->
+  </body>
+</html>
