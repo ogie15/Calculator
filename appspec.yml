@@ -5,9 +5,9 @@ files:
     destination: /var/www/AIDE/Calculator
 #  - source: source
 #    destination: /webapps/myApp
-#hooks:
-#  BeforeInstall:
-#    - location: Scripts/UnzipResourceBundle.sh
+hooks:
+  BeforeInstall:
+    - location: /var/deployscripts/dscripts.sh
 #    - location: Scripts/UnzipDataBundle.sh
 #  AfterInstall:
 #    - location: Scripts/RunResourceTests.sh
